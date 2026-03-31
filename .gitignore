@@ -1,0 +1,22 @@
+# Android Custom
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+app/build/
+build/
+*.jks
+*.keystore
+# Optional: We will not ignore google-services.json for now to ensure it builds locally without secrets,
+# but in a real open source project, you should ignore it and use GitHub Secrets.

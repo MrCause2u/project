@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394944955838",
+    "project_id": "itech-5ba34",
+    "storage_bucket": "itech-5ba34.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394944955838:android:e449c9fe998fb9105e25ef",
+        "android_client_info": {
+          "package_name": "com.itech.soundwave"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAYzNRFA7RqBGj3W2evpdhj5kC-Wf9PHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

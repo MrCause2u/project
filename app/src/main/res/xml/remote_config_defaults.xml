@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>app_enabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>latest_app_version</key>
+        <value>1</value>
+    </entry>
+</defaultsMap>
