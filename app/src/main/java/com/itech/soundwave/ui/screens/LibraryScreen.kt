@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.itech.soundwave.ads.BannerAd
 import com.itech.soundwave.model.AudioItem
 import com.itech.soundwave.ui.MainViewModel
 
@@ -50,6 +51,13 @@ fun LibraryScreen(
                         viewModel.playAudio(audio)
                         onNavigateToPlayer()
                     }
+                }
+                
+                // Banner Ad at the bottom of the list
+                item {
+                    BannerAd(
+                        modifier = Modifier.padding(vertical = 8.dp)
+                    )
                 }
             }
         }

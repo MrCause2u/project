@@ -33,6 +33,7 @@ import com.google.firebase.remoteconfig.ConfigUpdateListener
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigException
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
+import com.itech.soundwave.ads.AdManager
 import com.itech.soundwave.ui.MainViewModel
 import com.itech.soundwave.ui.screens.LibraryScreen
 import com.itech.soundwave.ui.screens.MaintenanceScreen
@@ -57,6 +58,9 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Initialize AdMob
+        AdManager.initialize(this)
         
         // Initialize Firebase Analytics
         firebaseAnalytics = Firebase.analytics
@@ -134,6 +138,8 @@ class MainActivity : ComponentActivity() {
     
     override fun onResume() {
         super.onResume()
+        
+        // Check for app updates
         val appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateManager
             .appUpdateInfo
@@ -147,6 +153,18 @@ class MainActivity : ComponentActivity() {
                     )
                 }
             }
+        
+        // Show App Open Ad if available (when returning from background)
+        AdManager.showAppOpenAdIfAvailable(this)
+        
+        // Load App Open Ad (for next time app returns from background)
+        AdManager.loadAppOpenAd(this)
+    }
+    
+    override fun onPause() {
+        super.onPause()
+        // Note: App Open Ads are shown when app resumes from background
+        // The actual showing happens in onResume via showAppOpenAdIfAvailable
     }
 
     private fun requestPermissions() {

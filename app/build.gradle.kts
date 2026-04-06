@@ -96,5 +96,8 @@ dependencies {
     // Extended Icons
     implementation("androidx.compose.material:material-icons-extended")
 
+    // AdMob - Google Mobile Ads
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
+
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
